@@ -1,0 +1,67 @@
+<?page title="Honda"?>
+
+<borderlayout apply="com.rahulauto.ui.composer.MainComposer">
+	<north height="100px" collapsible="true" splittable="true"
+		autoscroll="true">
+		Rahul Honda
+	</north>
+
+	<west id="sidePanelTitleId" title="Menu" size="250px" flex="true"
+		splittable="false" minsize="210" maxsize="450" collapsible="true">
+
+
+		<tabbox id="tb" width="450px" mold="accordion">
+			<tabs>
+				<tab label="Parts" />
+				<tab label="Customers" />
+				<tab label="Orders" />
+			</tabs>
+
+			<tabpanels>
+				<tabpanel>
+					<panel>
+						<panelchildren>
+							<div>
+								<toolbar>
+									<toolbarbutton id="listPart"
+										label="List Parts" width="300px" />
+								</toolbar>
+							</div>
+						</panelchildren>
+					</panel>
+				</tabpanel>
+				<tabpanel>
+					<panel>
+						<panelchildren>
+							<div>
+								<toolbar>
+									<toolbarbutton id="listCustomer"
+										label="List Customers" width="300px" />
+								</toolbar>
+
+							</div>
+						</panelchildren>
+					</panel>
+				</tabpanel>
+				<tabpanel>
+					<panel>
+						<panelchildren>
+							<div>
+								<toolbar>
+									<toolbarbutton id="createBill"
+										label="Create Bill" width="300px" />
+								</toolbar>
+							</div>
+						</panelchildren>
+					</panel>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+	</west>
+
+	<center autoscroll="true" flex="true">
+		<include id="contents" />
+	</center>
+</borderlayout>
+
+

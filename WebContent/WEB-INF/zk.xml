@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Created by ZK Studio
+-->
+
+<zk>
+	<device-config>
+		<device-type>ajax</device-type>
+		<timeout-uri>/timeout.zul</timeout-uri><!-- An empty URL can cause the browser to reload the same URL -->
+	</device-config>
+	<!-- Hibernate SessionFactory life cycle -->
+	<listener>
+		<description>Hibernate SessionFactory life cycle</description>
+		<listener-class>org.zkoss.zkplus.hibernate.HibernateSessionFactoryListener</listener-class>
+	</listener>
+	 
+	<!-- Hibernate OpenSessionInView life cycle -->
+	<listener>
+		<description>Hibernate Open Session In View life cycle</description>
+		<listener-class>org.zkoss.zkplus.hibernate.OpenSessionInViewListener</listener-class>
+	</listener>
+</zk>
+

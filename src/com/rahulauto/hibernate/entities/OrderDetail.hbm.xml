@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 3:59:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.rahulauto.hibernate.entities.OrderDetail" table="ORDERDETAIL">
+        <id name="id" type="java.lang.String">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="OrderId" type="java.lang.String">
+            <column name="ORDERID" />
+        </property>
+        <property name="detailName" type="java.lang.String">
+            <column name="DETAILNAME" />
+        </property>
+        <property name="price" type="java.lang.Double">
+            <column name="PRICE" />
+        </property>
+        <property name="numbers" type="int">
+            <column name="NUMBERS" />
+        </property>
+        <property name="totalPrice" type="java.lang.Double">
+            <column name="TOTALPRICE" />
+        </property>
+    </class>
+</hibernate-mapping>

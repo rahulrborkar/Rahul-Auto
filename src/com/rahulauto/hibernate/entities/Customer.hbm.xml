@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 3:59:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.rahulauto.hibernate.entities.Customer" table="CUSTOMER">
+        <id name="id" type="java.lang.String">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="firstName" type="java.lang.String">
+            <column name="FIRSTNAME" />
+        </property>
+        <property name="middleName" type="java.lang.String">
+            <column name="MIDDLENAME" />
+        </property>
+        <property name="lastName" type="java.lang.String">
+            <column name="LASTNAME" />
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+        <property name="birthDate" type="java.lang.String">
+            <column name="BIRTHDATE" />
+        </property>
+        <property name="contactNumber" type="long">
+            <column name="CONTACTNUMBER" />
+        </property>
+        <property name="lastUpdateDate" type="java.util.Date">
+            <column name="LASTUPDATEDATE" />
+        </property>
+        <property name="vehicleNumber" type="java.lang.String">
+            <column name="VEHICLENUMBER" />
+        </property>
+        <property name="vehiclePurchaseDate" type="java.util.Date">
+            <column name="VEHICLEPURCHASEDATE" />
+        </property>
+        <property name="lastServicingDate" type="java.util.Date">
+            <column name="LASTSERVICINGDATE" />
+        </property>
+        <property name="nextServicingDate" type="java.util.Date">
+            <column name="NEXTSERVICINGDATE" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<zk apply="com.rahulauto.ui.composer.PartListController">
+
+<button id="addPart" label="Add New" />
+<listbox id="parts" >                
+    <listhead>
+   	 	<listheader label="Company Name" width="200px"/>
+        <listheader label="Local Name" width="200px"/>
+        <listheader label="Price" width="100px"/>
+        <listheader label="Update" width="30px"/>
+        <listheader label="Delete" width="30px"/>
+    </listhead>
+   	<listitem>            
+            <listcell />
+            <listcell />
+            <listcell />
+    </listitem>
+</listbox>
+
+</zk>
