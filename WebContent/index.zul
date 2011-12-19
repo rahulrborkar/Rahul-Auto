@@ -1,5 +1,4 @@
-<?page title="Honda"?>
-
+<?page title="Rahul Honda"?>
 <borderlayout apply="com.rahulauto.ui.composer.MainComposer">
 	<north height="100px" collapsible="true" splittable="true"
 		autoscroll="true">
@@ -12,12 +11,25 @@
 
 		<tabbox id="tb" width="450px" mold="accordion">
 			<tabs>
+				<tab label="Vehicles" />
 				<tab label="Parts" />
 				<tab label="Customers" />
 				<tab label="Orders" />
 			</tabs>
 
 			<tabpanels>
+				<tabpanel>
+					<panel>
+						<panelchildren>
+							<div>
+								<toolbar>
+									<toolbarbutton id="listVehicles"
+										label="List Vehicles" width="300px" />
+								</toolbar>
+							</div>
+						</panelchildren>
+					</panel>
+				</tabpanel>
 				<tabpanel>
 					<panel>
 						<panelchildren>
@@ -63,5 +75,3 @@
 		<include id="contents" />
 	</center>
 </borderlayout>
-
-
