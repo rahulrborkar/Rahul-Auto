@@ -1,0 +1,64 @@
+<?page title="Add New Part" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="Add New Part" border="normal" closable="true"
+		width="500px" apply="com.rahulauto.ui.composer.AddPartController">
+		<grid>
+			<rows>
+				<row>
+					<cell>
+						<label value="Company Name" />
+					</cell>
+					<cell>
+						<textbox id="companyName" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Local Name" />
+					</cell>
+					<cell>
+						<textbox id="localName" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Vehicle Type" />
+					</cell>
+					<cell>
+						<textbox id="vehicleType" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Body Type" />
+					</cell>
+					<cell>
+						<textbox id="bodyType" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Company Price" />
+					</cell>
+					<cell>
+						<textbox id="companyPrice" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Local Price" />
+					</cell>
+					<cell>
+						<textbox id="localPrice" />
+					</cell>
+				</row>
+				<row>
+					<cell colspan="2" align="center">
+						<button id="addButton" label="Add Part" width="100px"
+							height="30px" />
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	</window>
+</zk>
