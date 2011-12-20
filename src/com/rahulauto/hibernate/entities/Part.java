@@ -1,7 +1,7 @@
 package com.rahulauto.hibernate.entities;
 
 public class Part {
-	private String id;
+	private int id;
 	private String companyPartName;
 	private String localPartName;
 	private String vehicleType;
@@ -9,10 +9,10 @@ public class Part {
 	private Double companyPrice;
 	private Double localPrice;
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getCompanyPartName() {

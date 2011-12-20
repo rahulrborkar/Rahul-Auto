@@ -1,36 +1,40 @@
-<zk apply="com.rahulauto.ui.composer.PartListController">
+<?page title="Part List" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="partList"
+		apply="com.rahulauto.ui.composer.PartListController">
 
-	<!-- <zscript>
-		<![CDATA[
-	import com.rahulauto.hibernate.dao.PartDAO;
-	PartDAO pdao;
-	List model = new ListModelList(pdao.findAll());
-]]>
-	</zscript> -->
 
-	<hlayout>
-		<button width="100px" label="Add New" />
-	</hlayout>
+		<!-- <zscript>
+			<![CDATA[
+			import com.rahulauto.hibernate.dao.PartDAO;
+			PartDAO pdao;
+			List model = new ListModelList(pdao.findAll());
+			]]>
+			</zscript> -->
 
-	<!-- <grid id="partsGrid" height="350px" model="${model}"
-		rowRenderer="com.rahulauto.ui.model.PartsListRenderer"
-		emptyMessage="No Parts"> -->
+		<hlayout>
+			<button id="addPartButton" width="100px" label="Add New" />
+		</hlayout>
+
+		<!-- <grid id="partsGrid" height="350px" model="${model}"
+			rowRenderer="com.rahulauto.ui.model.PartsListRenderer"
+			emptyMessage="No Parts"> -->
 		<grid>
-		<auxhead>
-			<auxheader label="Vehicle Parts List" colspan="9"
-				rowspan="1" style="text-align:center" />
-		</auxhead>
-		<columns>
-			<column width="30px">No</column>
-			<column>Company Name</column>
-			<column>Local Name</column>
-			<column>Vehicle Type</column>
-			<column>Body Type</column>
-			<column>Company Price</column>
-			<column>Local Price</column>
-			<column>Update</column>
-			<column>Delete</column>
-		</columns>
-	</grid>
-
+			<auxhead>
+				<auxheader label="Vehicle Parts List" colspan="9"
+					rowspan="1" style="text-align:center" />
+			</auxhead>
+			<columns>
+				<column width="30px">No</column>
+				<column>Company Name</column>
+				<column>Local Name</column>
+				<column>Vehicle Type</column>
+				<column>Body Type</column>
+				<column>Company Price</column>
+				<column>Local Price</column>
+				<column>Update</column>
+				<column>Delete</column>
+			</columns>
+		</grid>
+	</window>
 </zk>

@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-	Created by ZK Studio
--->
+<!-- Created by ZK Studio -->
 
 <zk>
 	<device-config>
 		<device-type>ajax</device-type>
-		<timeout-uri>/timeout.zul</timeout-uri><!-- An empty URL can cause the browser to reload the same URL -->
+		<timeout-uri>/timeout.zul</timeout-uri><!-- An empty URL can cause the 
+			browser to reload the same URL -->
 	</device-config>
-	<!-- Hibernate SessionFactory life cycle -->
+
+	<!-- Hibernate SessionFactory lifecycle -->
 	<listener>
-		<description>Hibernate SessionFactory life cycle</description>
-		<listener-class>org.zkoss.zkplus.hibernate.HibernateSessionFactoryListener</listener-class>
+		<description>Hibernate SessionFactory lifecycle</description>
+		<listener-class>org.zkoss.zkplus.hibernate.HibernateSessionFactoryListener
+		</listener-class>
 	</listener>
-	 
-	<!-- Hibernate OpenSessionInView life cycle -->
+
+	<!-- Hibernate OpenSessionInView Pattern -->
 	<listener>
-		<description>Hibernate Open Session In View life cycle</description>
-		<listener-class>org.zkoss.zkplus.hibernate.OpenSessionInViewListener</listener-class>
+		<description>Hibernate Open Session In View life-cycle</description>
+		<listener-class>org.zkoss.zkplus.hibernate.OpenSessionInViewListener
+		</listener-class>
+	</listener>
+
+	<!-- Hibernate thread session context handler -->
+	<listener>
+		<description>Hibernate thread session context handler</description>
+		<listener-class>org.zkoss.zkplus.hibernate.HibernateSessionContextListener
+		</listener-class>
 	</listener>
 </zk>
 
