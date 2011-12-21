@@ -1,25 +1,13 @@
 <?page title="Part List" contentType="text/html;charset=UTF-8"?>
 <zk>
-	<window id="partList"
+	<window id="partListWindow"
 		apply="com.rahulauto.ui.composer.PartListController">
-
-
-		<!-- <zscript>
-			<![CDATA[
-			import com.rahulauto.hibernate.dao.PartDAO;
-			PartDAO pdao;
-			List model = new ListModelList(pdao.findAll());
-			]]>
-			</zscript> -->
 
 		<hlayout>
 			<button id="addPartButton" width="100px" label="Add New" />
 		</hlayout>
 
-		<!-- <grid id="partsGrid" height="350px" model="${model}"
-			rowRenderer="com.rahulauto.ui.model.PartsListRenderer"
-			emptyMessage="No Parts"> -->
-		<grid>
+		<grid id="partsListGrid" height="350px" emptyMessage="No Parts">
 			<auxhead>
 				<auxheader label="Vehicle Parts List" colspan="9"
 					rowspan="1" style="text-align:center" />
@@ -32,8 +20,8 @@
 				<column>Body Type</column>
 				<column>Company Price</column>
 				<column>Local Price</column>
-				<column>Update</column>
-				<column>Delete</column>
+				<column width="60px"></column>
+				<column width="60px"></column>
 			</columns>
 		</grid>
 	</window>

@@ -1,6 +1,6 @@
 <?page title="Add New Part" contentType="text/html;charset=UTF-8"?>
 <zk>
-	<window title="Add New Part" border="normal" closable="true"
+	<window id="addPartWindow" title="Add New Part" border="normal" closable="true"
 		width="500px" apply="com.rahulauto.ui.composer.AddPartController">
 		<grid>
 			<rows>
@@ -41,7 +41,7 @@
 						<label value="Company Price" />
 					</cell>
 					<cell>
-						<textbox id="companyPrice" />
+						<decimalbox id="companyPrice" format="#####.##" />
 					</cell>
 				</row>
 				<row>
@@ -49,7 +49,7 @@
 						<label value="Local Price" />
 					</cell>
 					<cell>
-						<textbox id="localPrice" />
+						<decimalbox id="localPrice" format="#####.##" />
 					</cell>
 				</row>
 				<row>

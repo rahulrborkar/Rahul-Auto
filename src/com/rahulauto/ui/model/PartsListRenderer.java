@@ -4,7 +4,6 @@ import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zul.Button;
-import org.zkoss.zul.Image;
 import org.zkoss.zul.Label;
 import org.zkoss.zul.ListModelList;
 import org.zkoss.zul.Row;
@@ -16,19 +15,21 @@ import com.rahulauto.hibernate.entities.Part;
 public class PartsListRenderer implements RowRenderer {
 
 	private PartDAO partDao;
+	
+	private int id = 1;
 
 	@Override
 	public void render(final Row row, final java.lang.Object part) {
-		String[] ary = (String[]) part;
-		row.appendChild(new Image(""));
-		new Label(ary[0]).setParent(row);
-		new Label(ary[1]).setParent(row);
-		new Label(ary[2]).setParent(row);
-		new Label(ary[3]).setParent(row);
-		new Label(ary[4]).setParent(row);
-		new Label(ary[5]).setParent(row);
+		Part newPart = (Part) part;
+		row.appendChild(new Label(id + ""));
+		new Label(newPart.getCompanyPartName()).setParent(row);
+		new Label(newPart.getLocalPartName()).setParent(row);
+		new Label(newPart.getVehicleType()).setParent(row);
+		new Label(newPart.getBodyType()).setParent(row);
+		new Label(newPart.getCompanyPrice().toString()).setParent(row);
+		new Label(newPart.getLocalPrice().toString()).setParent(row);
 
-		final Button updateButton = new Button("Update");
+		final Button updateButton = new Button(null, "/images/edit-icon.png");
 		updateButton.addEventListener(Events.ON_CLICK, new EventListener() {
 			public void onEvent(Event event) throws Exception {
 				partDao.delete((Part) part);
@@ -37,7 +38,7 @@ public class PartsListRenderer implements RowRenderer {
 		});
 		row.appendChild(updateButton);
 
-		final Button deleteButton = new Button("Delete");
+		final Button deleteButton = new Button(null, "/images/delete-icon.png");
 		deleteButton.addEventListener(Events.ON_CLICK, new EventListener() {
 			public void onEvent(Event event) throws Exception {
 				partDao.delete((Part) part);
@@ -45,5 +46,6 @@ public class PartsListRenderer implements RowRenderer {
 			}
 		});
 		row.appendChild(deleteButton);
+		id += 1;
 	}
 }

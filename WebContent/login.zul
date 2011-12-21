@@ -1,32 +1,45 @@
 <?page id="testZul" title="Manage-Login"?>
-
-
 <div align="center">
-<window id="loginwin" title="Rahul Auto Login" border="normal" width="500px" position="center">
-	<div align="left">
-	    <label id="mesgLbl"></label>
-	    
-	  
-	    <groupbox>
-	   		<caption>Login</caption>
-	   
-	        <grid apply="com.rahulauto.ui.composer.LoginController">
-	            <rows>
-	                <row>User: <textbox id="nameTxb" name="j_username" value="root"/></row>
-	                <row>Password: <textbox id="passwordTxb" type="password" name="j_password" value="admin"/></row>
-	                <row align="right"><checkbox id="remember" name="j_spring_security_remember_me"/><div align="left">Don't ask for my password for two weeks</div></row>
-	                <row spans="2" align="center">
-	                    <hbox>
-	                        <button id="confirmBtn">OK</button>
-	                        <button id="Reset">Reset</button>
-	                    </hbox>
-	                </row>
-	                <row spans="2" align="center"> <a>Forget password?</a></row>
-	               
-	            </rows>
-	        </grid>
-	   
-	    </groupbox>
-    </div>
-</window>
+	<window id="loginwin" title="Rahul Auto Login" border="normal"
+		width="500px" position="center">
+		<div align="left">
+			<label id="mesgLbl"></label>
+			<groupbox>
+				<caption>Login</caption>
+				<grid
+					apply="com.rahulauto.ui.composer.LoginController">
+					<rows>
+						<row>
+							User:
+							<textbox id="nameTxb" name="j_username"
+								value="root" />
+						</row>
+						<row>
+							Password:
+							<textbox id="passwordTxb" type="password"
+								name="j_password" value="admin" />
+						</row>
+						<row align="right">
+							<checkbox id="remember"
+								name="j_spring_security_remember_me" />
+							<div align="left">
+								Don't ask for my password for two weeks
+							</div>
+						</row>
+						<row spans="2" align="center">
+							<hbox>
+								<button id="confirmBtn">OK</button>
+								<button id="Reset">Reset</button>
+							</hbox>
+						</row>
+						<row spans="2" align="center">
+							<a>Forget password?</a>
+						</row>
+
+					</rows>
+				</grid>
+
+			</groupbox>
+		</div>
+	</window>
 </div>
