@@ -30,15 +30,19 @@ public class PartsListRenderer implements RowRenderer {
 		new Label(newPart.getLocalPrice().toString()).setParent(row);
 
 		final Button updateButton = new Button(null, "/images/edit-icon.png");
+		updateButton.setWidth("20px");
+		updateButton.setHeight("20px");
 		updateButton.addEventListener(Events.ON_CLICK, new EventListener() {
 			public void onEvent(Event event) throws Exception {
-				partDao.delete((Part) part);
+				partDao.saveOrUpdate((Part) part);
 				row.getGrid().setModel(new ListModelList(partDao.findAll()));
 			}
 		});
 		row.appendChild(updateButton);
 
 		final Button deleteButton = new Button(null, "/images/delete-icon.png");
+		deleteButton.setWidth("20px");
+		deleteButton.setHeight("20px");
 		deleteButton.addEventListener(Events.ON_CLICK, new EventListener() {
 			public void onEvent(Event event) throws Exception {
 				partDao.delete((Part) part);

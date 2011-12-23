@@ -2,6 +2,7 @@ package com.rahulauto.ui.composer;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
+import org.zkoss.zk.ui.SuspendNotAllowedException;
 import org.zkoss.zk.ui.util.GenericForwardComposer;
 import org.zkoss.zul.Button;
 import org.zkoss.zul.Grid;
@@ -34,9 +35,9 @@ public class PartListController extends GenericForwardComposer {
 
 	}
 
-	public void onClick$addPartButton() {
-		Window window = (Window) Executions.createComponents("/admin/part/AddPart.zul", partListWindow, null);
-		window.doPopup();
+	public void onClick$addPartButton() throws SuspendNotAllowedException, InterruptedException {
+		Window window = (Window) Executions.createComponents("/admin/part/AddPart.zul", null, null);
+		window.doModal();
 	}
 
 }

@@ -20,8 +20,8 @@
 				<column>Body Type</column>
 				<column>Company Price</column>
 				<column>Local Price</column>
-				<column width="60px"></column>
-				<column width="60px"></column>
+				<column width="40px"></column>
+				<column width="40px"></column>
 			</columns>
 		</grid>
 	</window>
