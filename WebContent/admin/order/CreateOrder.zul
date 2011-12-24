@@ -1,0 +1,116 @@
+<?page title="Part List" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="orderListWindow"
+		apply="com.rahulauto.ui.composer.CreateOrderComposer">
+
+		<hlayout>
+			<grid>
+				<auxhead>
+					<auxheader label="Order List" colspan="9"
+						rowspan="1" style="text-align:center" />
+				</auxhead>
+				<rows>
+					<row>
+						<cell>
+							<label value="Order Type" />
+						</cell>
+						<cell>
+							<textbox id="orderType" />
+						</cell>
+					</row>
+					<row>
+						<cell>
+							<label value="Order Date" />
+						</cell>
+						<cell>
+							<datebox id="orderDate" />
+						</cell>
+					</row>
+					<row>
+						<cell>
+							<label value="Amount" />
+						</cell>
+						<cell>
+							<decimalbox id="amount" format="#####.##" />
+						</cell>
+					</row>
+					<row>
+						<cell>
+							<label value="Total Amount" />
+						</cell>
+						<cell>
+							<decimalbox id="totalAmount"
+								format="#####.##" />
+						</cell>
+					</row>
+					<row>
+						<cell>
+							<label value="Tax 1" />
+						</cell>
+						<cell>
+							<decimalbox id="tax1" format="#####.##" />
+						</cell>
+					</row>
+					<row>
+						<cell>
+							<label value="Tax 2" />
+						</cell>
+						<cell>
+							<decimalbox id="tax2" format="#####.##" />
+						</cell>
+					</row>
+					<row>
+						<cell>
+							<label value="Customer ID" />
+						</cell>
+						<cell>
+							<textbox id="customerId" />
+						</cell>
+					</row>
+					<row>
+						<cell>
+							<label value="Vehicle ID" />
+						</cell>
+						<cell>
+							<textbox id="vehicleId" />
+						</cell>
+					</row>
+					<row>
+						<cell colspan="2" align="center">
+							<button id="addOrderButton"
+								label="Add Order" />
+						</cell>
+					</row>
+				</rows>
+			</grid>
+		</hlayout>
+
+		<hlayout>
+			<separator orient="horizontal" />
+		</hlayout>
+
+		<hlayout width="100%">
+			<grid id="orderListGrid" height="200px"
+				emptyMessage="No Orders">
+				<auxhead>
+					<auxheader label="Order List" colspan="9"
+						rowspan="1" style="text-align:center" />
+				</auxhead>
+				<columns>
+					<column width="30px">No</column>
+					<column>Order Type</column>
+					<column>Order Date</column>
+					<column>Amount</column>
+					<column>Total Amount</column>
+					<column>Tax 1</column>
+					<column>Tax 2</column>
+					<column>Customer ID</column>
+					<column>Vehicle ID</column>
+					<column width="40px"></column>
+					<column width="40px"></column>
+				</columns>
+			</grid>
+		</hlayout>
+
+	</window>
+</zk>
