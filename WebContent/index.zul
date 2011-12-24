@@ -2,14 +2,14 @@
 <borderlayout apply="com.rahulauto.ui.composer.MainComposer">
 	<north height="100px" collapsible="true" splittable="true"
 		autoscroll="true">
-		Rahul Honda
+		<image src="images/honda.jpg" />
 	</north>
 
-	<west id="sidePanelTitleId" title="Menu" size="250px" flex="true"
-		splittable="false" minsize="210" maxsize="450" collapsible="true">
+	<west id="sidePanelTitleId" title="Menu" size="200px" flex="true"
+		splittable="false" minsize="200" maxsize="200" collapsible="true">
 
 
-		<tabbox id="tb" width="450px" mold="accordion">
+		<tabbox id="tb" width="200px" mold="accordion">
 			<tabs>
 				<tab label="Vehicles" />
 				<tab label="Parts" />
@@ -23,8 +23,8 @@
 						<panelchildren>
 							<div>
 								<toolbar>
-									<toolbarbutton id="listVehicles"
-										label="List Vehicles" width="300px" />
+									<toolbarbutton id="listVehicle"
+										label="List Vehicles" width="200px" />
 								</toolbar>
 							</div>
 						</panelchildren>
@@ -36,7 +36,7 @@
 							<div>
 								<toolbar>
 									<toolbarbutton id="listPart"
-										label="List Parts" width="300px" />
+										label="List Parts" width="200px" />
 								</toolbar>
 							</div>
 						</panelchildren>
@@ -48,7 +48,7 @@
 							<div>
 								<toolbar>
 									<toolbarbutton id="listCustomer"
-										label="List Customers" width="300px" />
+										label="List Customers" width="200px" />
 								</toolbar>
 
 							</div>
@@ -60,8 +60,10 @@
 						<panelchildren>
 							<div>
 								<toolbar>
-									<toolbarbutton id="createBill"
-										label="Create Bill" width="300px" />
+									<toolbarbutton id="createOrder"
+										label="Create Order" width="200px" />
+									<toolbarbutton id="listOrder"
+										label="List Orders" width="200px" />
 								</toolbar>
 							</div>
 						</panelchildren>

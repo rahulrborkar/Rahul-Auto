@@ -30,8 +30,8 @@ public class PartsListRenderer implements RowRenderer {
 		new Label(newPart.getLocalPrice().toString()).setParent(row);
 
 		final Button updateButton = new Button(null, "/images/edit-icon.png");
-		updateButton.setWidth("20px");
-		updateButton.setHeight("20px");
+		updateButton.setWidth("25px");
+		updateButton.setHeight("25px");
 		updateButton.addEventListener(Events.ON_CLICK, new EventListener() {
 			public void onEvent(Event event) throws Exception {
 				partDao.saveOrUpdate((Part) part);
@@ -41,8 +41,8 @@ public class PartsListRenderer implements RowRenderer {
 		row.appendChild(updateButton);
 
 		final Button deleteButton = new Button(null, "/images/delete-icon.png");
-		deleteButton.setWidth("20px");
-		deleteButton.setHeight("20px");
+		deleteButton.setWidth("25px");
+		deleteButton.setHeight("25px");
 		deleteButton.addEventListener(Events.ON_CLICK, new EventListener() {
 			public void onEvent(Event event) throws Exception {
 				partDao.delete((Part) part);
