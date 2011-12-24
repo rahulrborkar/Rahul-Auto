@@ -1,0 +1,29 @@
+<?page title="Vehicle List" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="vehicleListWindow"
+		apply="com.rahulauto.ui.composer.VehicleListComposer">
+
+		<hlayout>
+			<button id="addVehicleButton" width="100px" label="Add New" />
+		</hlayout>
+
+		<hlayout width="100%">
+			<grid id="vehicleListGrid" height="250px"
+				emptyMessage="No Vehicles">
+				<auxhead>
+					<auxheader label="Vehicle List" colspan="9"
+						rowspan="1" style="text-align:center" />
+				</auxhead>
+				<columns>
+					<column width="30px">No</column>
+					<column>Number</column>
+					<column>Chassis Number</column>
+					<column>Model</column>
+					<column width="50px"></column>
+					<column width="50px"></column>
+				</columns>
+			</grid>
+		</hlayout>
+
+	</window>
+</zk>

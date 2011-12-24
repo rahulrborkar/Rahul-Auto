@@ -1,0 +1,52 @@
+<?page title="Part List" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="orderListWindow"
+		apply="com.rahulauto.ui.composer.OrderListComposer">
+
+		<hlayout width="100%">
+			<grid id="orderListGrid" height="250px"
+				emptyMessage="No Orders">
+				<auxhead>
+					<auxheader label="Order List" colspan="9"
+						rowspan="1" style="text-align:center" />
+				</auxhead>
+				<columns>
+					<column width="30px">No</column>
+					<column>Order Type</column>
+					<column>Order Date</column>
+					<column>Amount</column>
+					<column>Total Amount</column>
+					<column>Tax 1</column>
+					<column>Tax 2</column>
+					<column>Customer ID</column>
+					<column>Vehicle ID</column>
+					<column width="40px"></column>
+					<column width="40px"></column>
+				</columns>
+			</grid>
+		</hlayout>
+
+		<hlayout><separator orient="horizontal" /></hlayout>
+
+		<hlayout  width="100%">
+			<grid id="orderDetailsGrid" height="150px"
+				emptyMessage="No Orders">
+				<auxhead>
+					<auxheader label="Order Details" colspan="9"
+						rowspan="1" style="text-align:center" />
+				</auxhead>
+				<columns>
+					<column width="30px">No</column>
+					<column>Order ID</column>
+					<column>Detail Name</column>
+					<column>Price</column>
+					<column>Numbers</column>
+					<column>Total Price</column>
+					<column width="40px"></column>
+					<column width="40px"></column>
+				</columns>
+			</grid>
+		</hlayout>
+
+	</window>
+</zk>

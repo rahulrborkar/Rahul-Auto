@@ -1,0 +1,89 @@
+<?page title="Add New Part" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="addCustomerWindow" title="Add New Customer"
+		border="normal" closable="true" width="500px"
+		apply="com.rahulauto.ui.composer.AddCustomerComposer">
+		<grid>
+			<rows>
+				<row>
+					<cell>
+						<label value="First Name" />
+					</cell>
+					<cell>
+						<textbox id="firstName" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Last Name" />
+					</cell>
+					<cell>
+						<textbox id="lastName" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Address" />
+					</cell>
+					<cell>
+						<textbox id="address" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Birth Date" />
+					</cell>
+					<cell>
+						<datebox id="birthDate" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Contact Number" />
+					</cell>
+					<cell>
+						<intbox id="contactNumber" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Vehicle Number" />
+					</cell>
+					<cell>
+						<textbox id="vehicleNumber" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Vehicle Purchase Date" />
+					</cell>
+					<cell>
+						<datebox id="purchaseDate" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Last Servicing Date" />
+					</cell>
+					<cell>
+						<datebox id="lastServicingDate" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Next Servicing Date" />
+					</cell>
+					<cell>
+						<datebox id="nextServicingDate" />
+					</cell>
+				</row>
+				<row>
+					<cell colspan="2" align="center">
+						<button id="addButton" label="Add Customer"
+							width="100px" height="30px" />
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	</window>
+</zk>
