@@ -21,6 +21,10 @@ public class MainComposer extends GenericForwardComposer {
 	public void onClick$listVehicle() {
 		displayPage("/admin/vehicle/VehicleList.zul");
 	}
+	
+	public void onClick$addEditVehicle() {
+		displayPage("/admin/vehicle/Vehicle.zul");
+	}
 
 	public void onClick$listPart() {
 		displayPage("/admin/part/PartList.zul");

@@ -1,0 +1,391 @@
+<zk>
+	<style>.z-caption-l { font-weight: bold; }</style>
+	<div width="100%"
+		apply="com.rahulauto.ui.composer.VehicleComposer">
+
+		<grid width="100%">
+			<columns>
+				<column width="100%">
+					<button label="Add" />
+					<button label="Update" />
+					<button label="Search" />
+					<button label="List" />
+				</column>
+			</columns>
+			<rows>
+				<row>
+					<cell>
+
+						<grid>
+							<rows>
+								<row>
+									<cell>
+										<label value="Manufacturer: " />
+										<textbox id="manufacturerBox" />
+									</cell>
+									<cell>
+										<label value="Model: " />
+										<textbox id="modelBox" />
+									</cell>
+									<cell>
+										<label value="Year: " />
+										<combobox id="yearBox"
+											mold="rounded" width="150px" readonly="true">
+											<comboitem label="Select" />
+											<comboitem label="2007" />
+											<comboitem label="2008" />
+											<comboitem label="2009" />
+											<comboitem label="2010" />
+											<comboitem label="2011" />
+											<comboitem label="2012" />
+										</combobox>
+									</cell>
+								</row>
+							</rows>
+						</grid>
+
+					</cell>
+				</row>
+
+				<row>
+					<cell>
+						<groupbox mold="3d" width="100%">
+							<caption image="images/info-icon.png"
+								label="Overview" />
+							<grid>
+								<rows>
+									<row>
+										<cell>
+											<label value="Make: " />
+											<textbox width="150px" />
+										</cell>
+										<cell>
+											<label value="Model: " />
+											<textbox width="150px" />
+										</cell>
+										<cell>
+											<label value="Year: " />
+											<combobox id="editYearBox"
+												mold="rounded" width="150px" readonly="true">
+												<comboitem
+													label="Select" />
+												<comboitem label="2007" />
+												<comboitem label="2008" />
+												<comboitem label="2009" />
+												<comboitem label="2010" />
+												<comboitem label="2011" />
+												<comboitem label="2012" />
+											</combobox>
+										</cell>
+									</row>
+									<row>
+										<cell>
+											<label value="Variant: " />
+											<textbox width="150px" />
+										</cell>
+										<cell colspan="2">
+											<label value="Starting: " />
+											<textbox width="150px" />
+										</cell>
+									</row>
+								</rows>
+							</grid>
+						</groupbox>
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<groupbox mold="3d" width="100%">
+							<caption image="images/fuel-icon.png"
+								label="Fuel Efficiency" />
+							<grid>
+								<rows>
+									<row>
+										<cell>
+											<label
+												value="Fuel Economy: " />
+											<decimalbox format="###.##"
+												width="85px" />
+											<separator orient="vertical"
+												width="5px" />
+											<combobox
+												id="fuelEconomyUnitBox" mold="rounded" width="60px"
+												readonly="true">
+												<comboitem label="Km/L" />
+											</combobox>
+										</cell>
+										<cell>
+											<label
+												value="Fuel Capacity: " />
+											<decimalbox format="###.##"
+												width="85px" />
+											<separator orient="vertical"
+												width="5px" />
+											<combobox
+												id="fuelCapacityUnitBox" mold="rounded" width="60px"
+												readonly="true">
+												<comboitem
+													label="litres" />
+											</combobox>
+										</cell>
+										<cell>
+											<label
+												value="Fuel Reserve: " />
+											<decimalbox format="###.##"
+												width="85px" />
+											<separator orient="vertical"
+												width="5px" />
+											<combobox
+												id="fuelReserveUnitBox" mold="rounded" width="60px"
+												readonly="true">
+												<comboitem
+													label="litres" />
+											</combobox>
+										</cell>
+									</row>
+									<row>
+										<cell>
+											<label value="Fuel Type: " />
+											<combobox id="fuelTypeBox"
+												mold="rounded" width="150px" readonly="true">
+												<comboitem
+													label="Select" />
+												<comboitem
+													label="Petrol" />
+												<comboitem
+													label="Diesel" />
+												<comboitem label="CNG" />
+												<comboitem
+													label="Battery" />
+											</combobox>
+										</cell>
+										<cell colspan="2">
+											<label
+												value="Charging Duration: " />
+											<textbox width="150px" />
+										</cell>
+									</row>
+								</rows>
+							</grid>
+						</groupbox>
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<groupbox mold="3d">
+							<caption image="images/gear-icon.png"
+								label="Engine Parameters" />
+							<grid>
+								<rows>
+									<row>
+										<cell>
+											<label
+												value="Engine Type: " />
+											<textbox width="150px" />
+										</cell>
+										<cell>
+											<label
+												value="Displacement: " />
+											<textbox width="150px" />
+										</cell>
+										<cell>
+											<label value="Ignition: " />
+											<textbox width="150px" />
+										</cell>
+									</row>
+									<row>
+										<cell>
+											<label value="Max Power: " />
+											<textbox width="150px" />
+										</cell>
+										<cell>
+											<label value="Max Torque: " />
+											<textbox width="150px" />
+										</cell>
+										<cell>
+											<label value="Bore: " />
+											<textbox width="150px" />
+										</cell>
+									</row>
+									<row>
+										<cell>
+											<label value="Stroke: " />
+											<textbox width="150px" />
+										</cell>
+										<cell colspan="2">
+											<label
+												value="Compression Ratio: " />
+											<textbox width="150px" />
+										</cell>
+									</row>
+								</rows>
+							</grid>
+						</groupbox>
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<groupbox mold="3d" width="100%">
+							<caption image="images/ruler-icon.png"
+								label="Dimensions" />
+							<grid>
+								<rows>
+									<row>
+										<cell>
+											<label value="Length: " />
+											<textbox width="150px" />
+										</cell>
+										<cell>
+											<label value="Height: " />
+											<textbox width="150px" />
+										</cell>
+										<cell>
+											<label value="Width: " />
+											<textbox width="150px" />
+										</cell>
+									</row>
+									<row>
+										<cell>
+											<label value="Clearance: " />
+											<textbox width="150px" />
+										</cell>
+										<cell>
+											<label
+												value="Saddle Height: " />
+											<textbox width="150px" />
+										</cell>
+										<cell>
+											<label
+												value="Curb Weight: " />
+											<textbox width="150px" />
+										</cell>
+									</row>
+									<row>
+										<cell>
+											<label
+												value="Total Weight: " />
+											<textbox width="150px" />
+										</cell>
+										<cell>
+											<label
+												value="Weight Capacity: " />
+											<textbox width="150px" />
+										</cell>
+										<cell>
+											<label value="Chassis: " />
+											<textbox width="150px" />
+										</cell>
+									</row>
+								</rows>
+							</grid>
+						</groupbox>
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<grid style="border:none;">
+							<rows>
+								<row>
+									<cell
+										style="padding:0px 0px 0px 0px;">
+										<groupbox mold="3d"
+											width="100%">
+											<caption
+												image="images/drive-train-icon.png" label="Drive Train" />
+											<grid>
+												<rows>
+													<row>
+														<cell
+															width="100px">
+															<label
+																value="Clutch: " />
+														</cell>
+														<cell>
+															<textbox
+																width="150px" />
+														</cell>
+													</row>
+													<row>
+														<cell
+															width="100px">
+															<label
+																value="Gear Box: " />
+														</cell>
+														<cell>
+															<textbox
+																width="150px" />
+														</cell>
+													</row>
+												</rows>
+											</grid>
+										</groupbox>
+									</cell>
+									<cell valign="top"
+										style="padding:0px 0px 0px 0px;">
+										<groupbox mold="3d"
+											width="100%">
+											<caption
+												image="images/misc-icon.png" label="Miscellaneous" />
+
+										</groupbox>
+									</cell>
+								</row>
+							</rows>
+						</grid>
+
+					</cell>
+				</row>
+
+				<row>
+					<cell>
+						<groupbox mold="3d" width="100%">
+							<caption image="images/accessories-icon.png"
+								label="Accessories" />
+
+						</groupbox>
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<groupbox mold="3d" width="100%">
+							<caption image="images/price-tag-icon.png"
+								label="Pricing" />
+							<grid>
+								<rows>
+									<row>
+										<cell>
+											<label
+												value="Ex-Showroom: " />
+											<decimalbox
+												format="######.##" width="85px" />
+											<separator orient="vertical"
+												width="5px" />
+											<combobox
+												id="exShowPriceUnitBox" mold="rounded" width="60px"
+												readonly="true">
+												<comboitem label="INR" />
+											</combobox>
+										</cell>
+										<cell colspan="2">
+											<label value="On-Road: " />
+											<decimalbox
+												format="######.##" width="85px" />
+											<separator orient="vertical"
+												width="5px" />
+											<combobox
+												id="onRoadPriceUnitBox" mold="rounded" width="60px"
+												readonly="true">
+												<comboitem label="INR" />
+											</combobox>
+										</cell>
+									</row>
+								</rows>
+							</grid>
+						</groupbox>
+					</cell>
+				</row>
+			</rows>
+
+		</grid>
+	</div>
+</zk>

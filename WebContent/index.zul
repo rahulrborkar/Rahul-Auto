@@ -23,8 +23,10 @@
 						<panelchildren>
 							<div>
 								<toolbar>
+									<toolbarbutton id="addEditVehicle"
+										label="Add / Edit Vehicle" width="200px" />
 									<toolbarbutton id="listVehicle"
-										label="List Vehicles" width="200px" />
+										label="List Vehicles" width="200px" visible="false" />
 								</toolbar>
 							</div>
 						</panelchildren>
